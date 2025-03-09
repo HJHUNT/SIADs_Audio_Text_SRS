@@ -24,7 +24,9 @@ class TextClassifier:
         # create a TfidfVectorizer object
         self.vectorizer = TfidfVectorizer()
         # set the number of dimensions to reduce the vectorized data to
-        self.num_dimensions = 100
+        #self.num_dimensions = 100  # low number of dimensions for testing
+        self.num_dimensions = 384   # medium number of dimensions for better performance
+        #self.num_dimensions = 784  # high number of dimensions for better performance
         self.df = df
         self.column_name = column_name
         self.column_name_cleaned = column_name + "_CLEANED"
